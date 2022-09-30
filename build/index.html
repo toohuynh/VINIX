@@ -53,11 +53,47 @@
         filter: grayscale(100%);
         transition: 0.3s;
       }
-      .client-logo img:hover {
+      .client-logo:hover img {
         -ms-transform: scale(1.25);
         -webkit-transform: scale(1.25);
         transform: scale(1.25);
         filter: none;
+      }
+
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        max-width: 400px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #footer {
+          margin-bottom: 0rem;
+        }
+        .footer-company {
+          margin-bottom: 0em !important;
+        }
+        .footer-company h2 {
+          text-align: center;
+          margin: 0;
+        }
+        .footer-company ul {
+          text-align: center;
+          line-height: 2rem !important;
+          margin-bottom: 0em !important;
+        }
+        .footer-contact {
+          margin-bottom: 0rem;
+        }
+        .footer-contact ul {
+          margin-top: 0rem !important;
+          text-align: center;
+          line-height: 2rem !important;
+        }
+        .footer-contact ul li {
+          padding: 0 !important;
+          border-top: none;
+        }
       }
     </style>
   </head>
@@ -212,42 +248,49 @@
           </ul>
           <div class="container">
             <div class="row">
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://docuf.ai/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 200%"
-                      src="/images/client-5.png"
+                      src="../build/images/client-5.png"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://ahamo.com/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 180%"
-                      src="/images/client-9.jpg"
+                      src="../build/images/client-9.jpg"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
 
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://lipple.co.jp/" target="_blank">
                   <div class="client-logo">
-                    <img src="/images/client-3.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/client-3.png"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://laichi.vn/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 155%"
-                      src="/images/client-4.png"
+                      src="../build/images/client-4.png"
                       alt=""
                     />
                   </div>
@@ -256,37 +299,47 @@
             </div>
 
             <div class="row">
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://koujun.ac/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 350%"
-                      src="/images/client-8.jpg"
+                      src="../build/images/client-8.jpg"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://tesosoft.com/" target="_blank">
                   <div class="client-logo">
-                    <img src="/images/client-1.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/client-1.png"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://www.kitsutaka.co.jp/en/" target="_blank">
                   <div class="client-logo">
-                    <img src="/images/clinent_7.jpg" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/clinent_7.jpg"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://longthanhplastic.com.vn/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 325%"
-                      src="/images/client-2.png"
+                      src="../build/images/client-2.png"
                       alt=""
                     />
                   </div>
@@ -295,19 +348,24 @@
             </div>
 
             <div class="row" style="justify-content: center">
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://atpos.net/">
                   <div class="client-logo">
-                    <img src="/images/client-10.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/client-10.png"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://recruit.sourcier.co.jp/">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 125%"
-                      src="/images/client-11.png"
+                      src="../build/images/client-11.png"
                       alt=""
                     />
                   </div>
@@ -320,7 +378,7 @@
 
       <!-- Footer -->
       <footer id="footer">
-        <section>
+        <section class="footer-company">
           <h2>Công ty TNHH Dịch Vụ Số Phượng Hoàng Việt</h2>
           <ul
             style="list-style-type: none; margin-left: -20px; line-height: 4rem"
@@ -331,8 +389,7 @@
             <li>Người đại diện: VÕ DUY ANH HÙNG</li>
           </ul>
         </section>
-        <section>
-          <!-- <h2>LIÊN HỆ CHÚNG TÔI</h2> -->
+        <section class="footer-contact">
           <ul class="alt" style="margin-top: 5rem; line-height: 3rem">
             <li>
               <span>Địa chỉ: </span>

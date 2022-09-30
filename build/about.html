@@ -19,6 +19,27 @@
     /></noscript>
 
     <style>
+      .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
       .client-logo {
         padding: 30px;
         display: flex;
@@ -36,11 +57,55 @@
         filter: grayscale(100%);
         transition: 0.3s;
       }
-      .client-logo img:hover {
+      .client-logo:hover img {
         -ms-transform: scale(1.25);
         -webkit-transform: scale(1.25);
         transform: scale(1.25);
         filter: none;
+      }
+
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #footer {
+          margin-bottom: 0rem;
+        }
+        .footer-company {
+          margin-bottom: 0em !important;
+        }
+        .footer-company h2 {
+          text-align: center;
+          margin: 0;
+        }
+        .footer-company ul {
+          text-align: center;
+          line-height: 2rem !important;
+          margin-bottom: 0em !important;
+        }
+        .footer-contact {
+          margin-bottom: 0rem;
+        }
+        .footer-contact ul {
+          margin-top: 0rem !important;
+          text-align: center;
+          line-height: 2rem !important;
+        }
+        .footer-contact ul li {
+          padding: 0 !important;
+          border-top: none;
+        }
+        .res-img {
+          display: none;
+        }
+        .res-text {
+          width: 100% !important;
+        }
+        .res-introduce {
+          text-align: center !important;
+        }
       }
     </style>
   </head>
@@ -61,7 +126,7 @@
           <header class="major">
             <h2>Giới thiệu</h2>
           </header>
-          <h3 style="text-align: start; font-weight: 600">
+          <h3 style="text-align: start; font-weight: 600" class="res-introduce">
             CÔNG TY TNHH DỊCH VỤ SỐ PHƯỢNG HOÀNG VIỆT
           </h3>
 
@@ -109,26 +174,45 @@
         </section>
 
         <section class="main special">
-          <h3 style="text-align: start; font-weight: 600">
+          <h3 style="text-align: start; font-weight: 600" class="res-introduce">
             Thông điệp của Phượng Hoàng Việt ...
           </h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 res-img">
+                <img
+                  src="../build/images/about-img-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+
+              <div class="col-6 res-text">
+                <p>
+                  &nbsp; &nbsp;Trước tiên, thay mặt công ty tôi xin gửi đến Quý
+                  khách hàng, cổ đông và toàn thể cán bộ công nhân viên lời
+                  chào, lời cảm ơn chân thành nhất về sự ủng hộ và hợp tác trong
+                  suốt thời gian qua.
+                </p>
+                <p>
+                  &nbsp; &nbsp;Công ty cổ phần đầu tư và phát triển công nghệ
+                  Phượng Hoàng Việt đã trải qua hơn 6 năm xây dựng và phát
+                  triển, công ty đã không ngừng khẳng định vị thế, thương hiệu
+                  trên thị trường. Mục tiêu hàng đầu của chúng tôi là đem lại
+                  lợi ích cao nhất cho Quý khách hàng, cổ đông và cán bộ công
+                  nhân viên Công ty.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div style="text-align: start; line-height: 2rem">
             <p>
-              - Trước tiên, thay mặt công ty tôi xin gửi đến Quý khách hàng, cổ
-              đông và toàn thể cán bộ công nhân viên lời chào, lời cảm ơn chân
-              thành nhất về sự ủng hộ và hợp tác trong suốt thời gian qua.
+              Để đạt mục tiêu đó, Công ty cổ phần đầu tư và phát triển công nghệ
+              Phượng Hoàng Việt cam kết sẽ thực hiện các chính sách:
             </p>
-            <p>
-              - Công ty cổ phần đầu tư và phát triển công nghệ Phượng Hoàng Việt
-              đã trải qua hơn 9 năm xây dựng và phát triển, công ty đã không
-              ngừng khẳng định vị thế, thương hiệu trên thị trường. Mục tiêu
-              hàng đầu của chúng tôi là đem lại lợi ích cao nhất cho Quý khách
-              hàng, cổ đông và cán bộ công nhân viên Công ty.
-            </p>
-            <p>
-              - Để đạt mục tiêu đó, Công ty cổ phần đầu tư và phát triển công
-              nghệ Phượng Hoàng Việt cam kết sẽ thực hiện các chính sách:
-              <ul
+
+            <ul
               style="
                 text-align: start;
                 list-style-type: none;
@@ -140,44 +224,71 @@
                   class="fa fa-check"
                   style="color: #59c8dc; margin-right: 10px"
                 ></i>
-                Với khách hàng, chúng tôi mong muốn hợp tác trên cơ sở cùng có lợi, cung cấp cho khách hàng các sản phẩm và dịch vụ có chất lượng tốt nhất.
+                Với khách hàng, chúng tôi mong muốn hợp tác trên cơ sở cùng có
+                lợi, cung cấp cho khách hàng các sản phẩm và dịch vụ có chất
+                lượng tốt nhất.
               </li>
               <li>
                 <i
                   class="fa fa-check"
                   style="color: #59c8dc; margin-right: 10px"
                 ></i>
-                Với cổ đông, chúng tôi duy trì sự phát triển của Công ty theo hướng bền vững, quản lý công khai minh bạch và sử dụng nguồn vốn hiệu quả.
+                Với cổ đông, chúng tôi duy trì sự phát triển của Công ty theo
+                hướng bền vững, quản lý công khai minh bạch và sử dụng nguồn vốn
+                hiệu quả.
               </li>
               <li>
                 <i
                   class="fa fa-check"
                   style="color: #59c8dc; margin-right: 10px"
                 ></i>
-                Với cán bộ công nhân viên Công ty, chúng tôi tạo dựng một môi trường làm việc chuyên nghiệp với thu nhập ngày càng gia tăng, tạo điều kiện cho người lao động có cơ hội đào tạo và phát triển đồng hành cùng công ty.
+                Với cán bộ công nhân viên Công ty, chúng tôi tạo dựng một môi
+                trường làm việc chuyên nghiệp với thu nhập ngày càng gia tăng,
+                tạo điều kiện cho người lao động có cơ hội đào tạo và phát triển
+                đồng hành cùng công ty.
               </li>
             </ul>
+            <p>
+              &nbsp; &nbsp;Với những thành công đạt được là nhờ có sự quan tâm
+              và ủng hộ của Quý khách hàng, sự tin tưởng của Quý vị cổ đông,
+              định hướng của Hội đồng Quản trị cùng với sự nổ lực phấn đấu của
+              Ban giám đốc và toàn thể cán bộ công nhân viên Công ty.
             </p>
-            <p>- Với những thành công đạt được là nhờ có sự quan tâm và ủng hộ của Quý khách hàng, sự tin tưởng của
-              Quý vị cổ đông, định hướng của Hội đồng Quản trị cùng với sự nổ lực phấn đấu của Ban giám đốc và toàn thể cán bộ công nhân viên Công ty.</p>
-              <p>Một lần nữa xin gửi đến tất cả các Quý vị lời cảm ơn chân thành nhất.</p>
-              <p style="text-align: end;">Giám đốc điều hành <br>
-                VÕ DUY ANH HÙNG</p>
+            <p>
+              Một lần nữa xin gửi đến tất cả các Quý vị lời cảm ơn chân thành
+              nhất.
+            </p>
+            <p style="text-align: end">
+              Giám đốc điều hành <br />
+              VÕ DUY ANH HÙNG
+            </p>
           </div>
         </section>
 
         <section class="main special">
-          <h3 style="text-align: start; font-weight: 600">
+          <h3 style="text-align: start; font-weight: 600" class="res-introduce">
             NHÂN SỰ
           </h3>
           <div style="text-align: start; line-height: 2rem">
             <p>
-             - Tại Phượng Hoàng Việt xem con người là nguồn tài nguyên quan trọng nhất để từ đó làm nền tảng cho tất cả mọi hoạt động và kinh doanh của tố chức mình. Để đạt được điều đó, chúng tôi đặt ra một chính sách đào tạo để phát triển khả năng, kinh nghiệm cũng như kiến thức của mỗi thành viên trong công ty, và chính sách đó được cập nhật liên tục nhằm thoả mãn những mong mỏi của nhân viên, sao cho hiệu quả sản xuất luôn đạt mức cao nhất trong khả năng của chúng tôi. Chính nhờ đó, tập thể Phượng Hoàng Việt ngày càng gắn bó và phát triển bền vững...
+              &nbsp; &nbsp; Tại Phượng Hoàng Việt xem con người là nguồn tài
+              nguyên quan trọng nhất để từ đó làm nền tảng cho tất cả mọi hoạt
+              động và kinh doanh của tố chức mình. Để đạt được điều đó, chúng
+              tôi đặt ra một chính sách đào tạo để phát triển khả năng, kinh
+              nghiệm cũng như kiến thức của mỗi thành viên trong công ty, và
+              chính sách đó được cập nhật liên tục nhằm thoả mãn những mong mỏi
+              của nhân viên, sao cho hiệu quả sản xuất luôn đạt mức cao nhất
+              trong khả năng của chúng tôi. Chính nhờ đó, tập thể Phượng Hoàng
+              Việt ngày càng gắn bó và phát triển bền vững...
             </p>
             <p>
-              - Ngoài ra, với chính sách đào tạo, nâng cấp thường xuyên về công nghệ và giải pháp, các chuyên gia của Phượng Hoàng Việt liên tục được đào tạo trong quá trình làm việc. Nhiều thành viên trong công ty sở hữu nhiều chứng chỉ quốc tế của các hãng cung cấp giải pháp và dịch vụ hàng đầu thế giới như: Microsoft, Oracle,...
+              &nbsp; &nbsp; Ngoài ra, với chính sách đào tạo, nâng cấp thường
+              xuyên về công nghệ và giải pháp, các chuyên gia của Phượng Hoàng
+              Việt liên tục được đào tạo trong quá trình làm việc. Nhiều thành
+              viên trong công ty sở hữu nhiều chứng chỉ quốc tế của các hãng
+              cung cấp giải pháp và dịch vụ hàng đầu thế giới như: Microsoft,
+              Oracle,...
             </p>
-             
           </div>
         </section>
 
@@ -187,37 +298,49 @@
           </header>
           <div class="container">
             <div class="row">
-              <div class="col-3">
-                <a href="https://tesosoft.com/">
-                  <div class="client-logo">
-                    <img src="/images/client-1.png" alt="" />
-                  </div>
-                </a>
-              </div>
-              <div class="col-3">
-                <a href="https://longthanhplastic.com.vn/">
+              <div class="col-6">
+                <a href="https://docuf.ai/" target="_blank">
                   <div class="client-logo">
                     <img
-                      style="scale: 325%"
-                      src="/images/client-2.png"
+                      class="img-fluid"
+                      style="scale: 200%"
+                      src="../build/images/client-5.png"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
-                <a href="https://lipple.co.jp/">
+              <div class="col-6">
+                <a href="https://ahamo.com/" target="_blank">
                   <div class="client-logo">
-                    <img src="/images/client-3.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      style="scale: 180%"
+                      src="../build/images/client-9.jpg"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
-                <a href="https://laichi.vn/">
+
+              <div class="col-6">
+                <a href="https://lipple.co.jp/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
+                      src="../build/images/client-3.png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="https://laichi.vn/" target="_blank">
+                  <div class="client-logo">
+                    <img
+                      class="img-fluid"
                       style="scale: 155%"
-                      src="/images/client-4.png"
+                      src="../build/images/client-4.png"
                       alt=""
                     />
                   </div>
@@ -226,41 +349,47 @@
             </div>
 
             <div class="row">
-              <div class="col-3">
-                <a href="https://koujun.ac/">
+              <div class="col-6">
+                <a href="https://koujun.ac/" target="_blank">
                   <div class="client-logo">
                     <img
+                      class="img-fluid"
                       style="scale: 350%"
-                      src="/images/client-8.jpg"
+                      src="../build/images/client-8.jpg"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
-                <a href="https://docuf.ai/">
+              <div class="col-6">
+                <a href="https://tesosoft.com/" target="_blank">
                   <div class="client-logo">
                     <img
-                      style="scale: 200%"
-                      src="/images/client-5.png"
+                      class="img-fluid"
+                      src="../build/images/client-1.png"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
-                <a href="https://www.kitsutaka.co.jp/en/">
+              <div class="col-6">
+                <a href="https://www.kitsutaka.co.jp/en/" target="_blank">
                   <div class="client-logo">
-                    <img src="/images/clinent_7.jpg" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/clinent_7.jpg"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
-                <a href="https://ahamo.com/">
+              <div class="col-6">
+                <a href="https://longthanhplastic.com.vn/" target="_blank">
                   <div class="client-logo">
                     <img
-                      style="scale: 180%"
-                      src="/images/client-9.jpg"
+                      class="img-fluid"
+                      style="scale: 325%"
+                      src="../build/images/client-2.png"
                       alt=""
                     />
                   </div>
@@ -269,19 +398,26 @@
             </div>
 
             <div class="row" style="justify-content: center">
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://atpos.net/">
                   <div class="client-logo">
-                    <img src="/images/client-10.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      src="../build/images/client-10.png"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
-              <div class="col-3">
+              <div class="col-6">
                 <a href="https://recruit.sourcier.co.jp/">
                   <div class="client-logo">
-                    <img 
-                    style="scale: 125%"
-                    src="/images/client-11.png" alt="" />
+                    <img
+                      class="img-fluid"
+                      style="scale: 125%"
+                      src="../build/images/client-11.png"
+                      alt=""
+                    />
                   </div>
                 </a>
               </div>
@@ -292,7 +428,7 @@
 
       <!-- Footer -->
       <footer id="footer">
-        <section>
+        <section class="footer-company">
           <h2>Công ty TNHH Dịch Vụ Số Phượng Hoàng Việt</h2>
           <ul
             style="list-style-type: none; margin-left: -20px; line-height: 4rem"
@@ -303,8 +439,7 @@
             <li>Người đại diện: VÕ DUY ANH HÙNG</li>
           </ul>
         </section>
-        <section>
-          <!-- <h2>LIÊN HỆ CHÚNG TÔI</h2> -->
+        <section class="footer-contact">
           <ul class="alt" style="margin-top: 5rem; line-height: 3rem">
             <li>
               <span>Địa chỉ: </span>
