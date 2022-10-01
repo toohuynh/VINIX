@@ -6,39 +6,70 @@
 -->
 <html>
   <head>
-    <title>VNIX</title>
+    <title>VINIX</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <meta
+      property="og:image"
+      content="https://user-images.githubusercontent.com/111276864/193159758-f4afc5b9-c87e-432b-8505-157c9df4ec67.png"
+    />
+    <meta property="og:title" content="Phượng Hoàng Việt" />
+    <meta
+      property="og:description"
+      content="PHƯỢNG HOÀNG VIỆT đã và đang mở rộng hợp tác với các đối tác trong và ngoài nước và cam kết là đối tác tin cậy của nhiều nhà đầu tư, là môi trường tốt cho những người có năng lực và lòng nhiệt thành."
+    />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
 
     <style>
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+      .email {
+        text-decoration: none;
+        font-size: 1em;
+        color: #fff;
+        border: none;
       }
-      @media (min-width: 768px) {
-        .container {
-          width: 750px;
-        }
+      .email:hover {
+        color: #eee;
       }
-      @media (min-width: 992px) {
-        .container {
-          width: 970px;
-        }
+      .phone {
+        text-decoration: none;
+        font-size: 1em;
+        color: #fff;
+        border: none;
       }
-      @media (min-width: 1200px) {
-        .container {
-          width: 1170px;
-        }
+      .phone:hover {
+        color: #eee;
+      }
+
+      #nav ul li a {
+        color: #636363;
+        font-size: 22px;
+        text-decoration: none;
       }
       .client-logo {
         padding: 30px;
@@ -63,39 +94,19 @@
         transform: scale(1.25);
         filter: none;
       }
-
-      .img-fluid {
-        max-width: 100%;
-        height: auto;
+      #footer {
+        padding-top: 1em;
+      }
+      .footer-company ul li {
+        color: #fff;
+        font-size: 1em;
       }
 
       @media only screen and (max-width: 600px) {
         #footer {
-          margin-bottom: 0rem;
-        }
-        .footer-company {
-          margin-bottom: 0em !important;
-        }
-        .footer-company h2 {
-          text-align: center;
-          margin: 0;
-        }
-        .footer-company ul {
-          text-align: center;
-          line-height: 2rem !important;
-          margin-bottom: 0em !important;
-        }
-        .footer-contact {
-          margin-bottom: 0rem;
-        }
-        .footer-contact ul {
-          margin-top: 0rem !important;
-          text-align: center;
-          line-height: 2rem !important;
-        }
-        .footer-contact ul li {
-          padding: 0 !important;
-          border-top: none;
+          padding-top: 1em;
+          margin-bottom: 0em;
+          padding-bottom: 0em;
         }
         .res-img {
           display: none;
@@ -105,6 +116,21 @@
         }
         .res-introduce {
           text-align: center !important;
+        }
+        #another-name {
+          display: none;
+        }
+
+        #ceo {
+          display: none;
+        }
+
+        .footer-company {
+          margin-bottom: 0em !important;
+        }
+
+        .contact-us {
+          margin-top: -15px;
         }
       }
     </style>
@@ -180,11 +206,7 @@
           <div class="container">
             <div class="row">
               <div class="col-6 res-img">
-                <img
-                  src="../build/images/about-img-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
+                <img src="/images/about-img-1.jpg" class="img-fluid" alt="" />
               </div>
 
               <div class="col-6 res-text">
@@ -298,49 +320,50 @@
           </header>
           <div class="container">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://docuf.ai/" target="_blank">
                   <div class="client-logo">
                     <img
                       class="img-fluid"
                       style="scale: 200%"
-                      src="../build/images/client-5.png"
+                      src="/images/client-5.png"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://ahamo.com/" target="_blank">
                   <div class="client-logo">
                     <img
                       class="img-fluid"
                       style="scale: 180%"
-                      src="../build/images/client-9.jpg"
+                      src="/images/client-9.jpg"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
 
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://lipple.co.jp/" target="_blank">
                   <div class="client-logo">
                     <img
+                      style="scale: 80%"
                       class="img-fluid"
-                      src="../build/images/client-3.png"
+                      src="/images/client-3.png"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://laichi.vn/" target="_blank">
                   <div class="client-logo">
                     <img
                       class="img-fluid"
                       style="scale: 155%"
-                      src="../build/images/client-4.png"
+                      src="/images/client-4.png"
                       alt=""
                     />
                   </div>
@@ -349,47 +372,39 @@
             </div>
 
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://koujun.ac/" target="_blank">
                   <div class="client-logo">
                     <img
                       class="img-fluid"
                       style="scale: 350%"
-                      src="../build/images/client-8.jpg"
+                      src="/images/client-8.jpg"
                       alt=""
                     />
                   </div>
                 </a>
               </div>
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://tesosoft.com/" target="_blank">
                   <div class="client-logo">
-                    <img
-                      class="img-fluid"
-                      src="../build/images/client-1.png"
-                      alt=""
-                    />
+                    <img class="img-fluid" src="/images/client-1.png" alt="" />
                   </div>
                 </a>
               </div>
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://www.kitsutaka.co.jp/en/" target="_blank">
                   <div class="client-logo">
-                    <img
-                      class="img-fluid"
-                      src="../build/images/clinent_7.jpg"
-                      alt=""
-                    />
+                    <img class="img-fluid" src="/images/clinent_7.jpg" alt="" />
                   </div>
                 </a>
               </div>
-              <div class="col-6">
+              <div class="col-md-3 col-6">
                 <a href="https://longthanhplastic.com.vn/" target="_blank">
                   <div class="client-logo">
                     <img
                       class="img-fluid"
                       style="scale: 325%"
-                      src="../build/images/client-2.png"
+                      src="/images/client-2.png"
                       alt=""
                     />
                   </div>
@@ -401,11 +416,7 @@
               <div class="col-6">
                 <a href="https://atpos.net/">
                   <div class="client-logo">
-                    <img
-                      class="img-fluid"
-                      src="../build/images/client-10.png"
-                      alt=""
-                    />
+                    <img class="img-fluid" src="/images/client-10.png" alt="" />
                   </div>
                 </a>
               </div>
@@ -415,7 +426,7 @@
                     <img
                       class="img-fluid"
                       style="scale: 125%"
-                      src="../build/images/client-11.png"
+                      src="/images/client-11.png"
                       alt=""
                     />
                   </div>
@@ -429,38 +440,73 @@
       <!-- Footer -->
       <footer id="footer">
         <section class="footer-company">
-          <h2>Công ty TNHH Dịch Vụ Số Phượng Hoàng Việt</h2>
-          <ul
-            style="list-style-type: none; margin-left: -20px; line-height: 4rem"
-          >
-            <li>VIET PHOENIX DIGITAL SERVICE COMPANY LIMITED</li>
-            <li>Tên viết tắt: VINIX</li>
-            <li>Mã số thuế: 0313771949</li>
-            <li>Người đại diện: VÕ DUY ANH HÙNG</li>
-          </ul>
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <h3>
+                Công ty TNHH Dịch Vụ Số <br />
+                Phượng Hoàng Việt
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <ul style="list-style-type: none; margin-left: -40px">
+                <li id="another-name" style="font-weight: 600">
+                  VIET PHOENIX DIGITAL SERVICE COMPANY LIMITED
+                </li>
+                <li>Tên viết tắt: VINIX</li>
+                <li>Mã số thuế: 0313771949</li>
+                <li id="ceo">Người đại diện: VÕ DUY ANH HÙNG</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-xs-12" style="padding-left: 5px">
+              <ul
+                class="contact-us"
+                style="list-style-type: none; padding-left: 0rem"
+              >
+                <li>
+                  <span>Địa chỉ: </span>
+                  <span>
+                    4A Đinh Bộ Lĩnh &bull; Phường 24 &bull; Q.Bình Thạnh &bull;
+                    HCM
+                  </span>
+                </li>
+                <li>
+                  <span>Số điện thoại: </span>
+                  <span
+                    ><a class="phone" href="tel:+84815436888"
+                      >(+84) 815436888</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <span>Email: </span>
+                  <span
+                    ><a
+                      class="email"
+                      href="mailto: phuonghoangviet1507@gmail.com"
+                      >phuonghoangviet1507@gmail.com</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section class="footer-contact">
-          <ul class="alt" style="margin-top: 5rem; line-height: 3rem">
-            <li>
-              <span>Địa chỉ: </span>
-              <span>
-                4A Đinh Bộ Lĩnh &bull; Phường 24 &bull; Quận Bình Thạnh &bull;
-                Thành phố Hồ Chí Minh
-              </span>
-            </li>
-            <li>
-              <span>Số điện thoại: </span>
-              <span>(+84) 815436888</span>
-            </li>
-            <li>
-              <span>Email: </span>
-              <span><a href="#">phuonghoangviet1507@gmail.com</a></span>
-            </li>
-          </ul>
-        </section>
-        <p class="copyright">
+        <p class="copyright" style="margin-top: 0.5em">
           Copyright &copy; 2022 All rights reserved | This website is made by
-          <a href="https://hesosoft.com/">Hero Solution </a>.
+          <a
+            style="
+              text-decoration: none;
+              font-style: italic;
+              font-size: 1em;
+              color: #fff;
+              border: none;
+            "
+            href="https://hesosoft.com/"
+            target="_blank"
+            >Hero Solution </a
+          >.
         </p>
       </footer>
     </div>
@@ -469,6 +515,11 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
